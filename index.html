@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>App Fortune</title>
+    <style>
+        /* .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        } */
+        body {
+            margin: 5px 5px 5px 5px;
+            background-color: #f0f0f0;
+            overflow: none;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .list {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 300px;
+        }
+
+        .applist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        .agelistparent {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .agelist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="./index.html" id='home'
+            style="float: left;display: block;color: black;text-align: center;text-decoration: none;padding:5px 15px;font-size: 17px;border-radius:10px;"><img
+                src='https://github.com/techguy16/appfortune/blob/main/Logo.png?raw=true' width=50px></a>
+    </div>
+    <br><br><br><br>
+    <h2>Browse by category</h2>
+    <div class='list'>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/accessories-screenshot.svg'
+                        width=50px></th>
+                <th><a href='./categories/accessories.html'>
+                        <h3>Accessories</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/theme-config.svg'
+                        width=50px></th>
+                <th><a href='./categories/customization.html'>
+                        <h3>Customization</h3>
+                    </a></th>
+            </table>
+        </div>        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/calc.svg'
+                        width=50px></th>
+                <th><a href='./categories/education.html'>
+                        <h3>Education</h3>
+                    </a></th>
+            </table>
+        </div>
+
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/applications-games.svg'
+                        width=50px></th>
+                <th><a href='./categories/games.html'>
+                        <h3>Games</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/preferences-color.svg'
+                        width=50px></th>
+                <th><a href='./categories/graphics.html'>
+                        <h3>Graphics</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/web-browser.svg'
+                        width=50px></th>
+                <th><a href='./categories/internet.html'>
+                        <h3>Internet</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/libreoffice.svg'
+                        width=50px></th>
+                <th><a href='./categories/office.html'>
+                        <h3>Office</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/visualstudiocode.svg'
+                        width=50px></th>
+                <th><a href='./categories/programming.html'>
+                        <h3>Programming</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://www.elevenforum.com/attachments/windows_security-png.20038/' width=50px></th>
+                <th><a href='./categories/security.html'>
+                        <h3>Security</h3>
+                    </a></th>
+            </table>
+        </div>
+        <div class="applist">
+            <table>
+                <th><img src='https://raw.githubusercontent.com/yeyushengfan258/Win11-icon-theme/37c82fdd889c1846231d93382ffc203d59b44998/src/apps/scalable/multimedia-volume-control.svg'
+                        width=50px></th>
+                <th><a href='./categories/soundvideo.html'>
+                        <h3>Sound & Video</h3>
+                    </a></th>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <h2>Browse by age</h2>
+    <div class='agelistParent'>
+        <div class="applist">
+            <table>
+                <th><a href='./categories/3to7.html'>
+                        <h3>Ages 3 to 6</h3>
+                    </a></th>
+            </table>
+        </div>
+                <div class="applist">
+            <table>
+                <th><a href='./categories/7to12.html'>
+                        <h3>Ages 7 to 12</h3>
+                    </a></th>
+            </table>
+        </div>
+                        <div class="applist">
+            <table>
+                <th><a href='./categories/13plus.html'>
+                        <h3>Ages 13+</h3>
+                    </a></th>
+            </table>
+        </div>
+</body>
+
+</html>

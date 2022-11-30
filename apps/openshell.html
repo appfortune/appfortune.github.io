@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>App Fortune</title>
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+
+    </script>
+    <style>
+        /* .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        } */
+        body {
+            margin: 5px 5px 5px 5px;
+            background-color: #f0f0f0;
+            overflow: none;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .list {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .applist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        .agelistparent {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .agelist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        #appname {
+            font-size: 60px;
+        }
+
+        #madeby {
+            font-size: 20px;
+        }
+
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px 45px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            position: absolute;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left:-88px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: block;
+            font-size:15px;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom:3px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+yellow {color:green;font-weight:bold;}
+
+@media only screen and (min-width: 1399px) {
+  #app {
+    width:75%;
+    margin-left:12%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  #app {
+    width:50%;
+    margin-left:24.8%;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="../index.html" id='home'
+            style="float: left;display: block;color: black;text-align: center;text-decoration: none;padding:5px 15px;font-size: 17px;border-radius:10px;"><img
+                src='https://github.com/techguy16/appfortune/blob/main/Logo.png?raw=true' width=50px></a>
+    </div>
+    <br><br><br><br>
+<div id='app'>
+
+    <img src='https://scontent.fchc1-1.fna.fbcdn.net/v/t39.30808-1/308505838_395527122776112_3724887326778518994_n.png?_nc_cat=105&ccb=1-7&_nc_sid=c6021c&_nc_ohc=J69jit0VSlYAX8o8CPH&_nc_ht=scontent.fchc1-1.fna&oh=00_AfC_G75Tei7SrDQ-ncPQzxAT1YQ1lT8MAop1jVQe13S8_g&oe=638B6245' width=200px
+        style='float:left;margin-left:10px;border-radius:10px;border-color:black;border:2px solid black; margin-right:10px;background-color:white;'>
+        <table style='width:69%;'>
+            <th>
+        <h1 id='appname'>Open Shell</h1>
+    </th>    
+    <th>
+    <div class="dropdown" style='float:right;position:absolute; top:100px;'>
+        <button onclick="myFunction()" class="dropbtn">Download</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.170/OpenShellSetup_4_4_170.exe"><table><th><img src='https://pnggrid.com/wp-content/uploads/2021/06/Windows-11-Icon-Logo.png' width=25px style='margin-right:10px;'></th><th>Windows</th></table></a>
+          
+        </div>
+    </div>
+</th></table>
+    <p id='madeby'>Made by: Open Shell Project</p>
+    <p><b>Privacy Rating:</b> <yellow>Good</yellow></p>
+
+<br>
+<br>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'description')" id="defaultOpen"><b>ABOUT</b></button>
+  <button class="tablinks" onclick="openCity(event, 'compatibility')"><b>INFORMATION</b></button>
+</div>
+<!-- Tab content -->
+<div id="description" class="tabcontent">
+Fork of Classic Shell.
+</div>
+
+<div id="compatibility" class="tabcontent">
+<h3>Compatibility</h3>
+  <p><b>Windows Compatibility:</b> Windows 7+</p>
+</div>
+
+</div>
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+</html>
