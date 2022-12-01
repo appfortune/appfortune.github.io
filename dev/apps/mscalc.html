@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>App Fortune</title>
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+
+    </script>
+    <style>
+        /* .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        } */
+        body {
+            margin: 5px 5px 5px 5px;
+            background-color: #f0f0f0;
+            overflow: none;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .list {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .applist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        .agelistparent {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .agelist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        #appname {
+            font-size: 60px;
+        }
+
+        #madeby {
+            font-size: 20px;
+        }
+
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px 45px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            position: absolute;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left:-88px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: block;
+            font-size:15px;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom:3px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+yellow {color:orange;font-weight:bold;}
+
+@media only screen and (min-width: 1399px) {
+  #app {
+    width:75%;
+    margin-left:12%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  #app {
+    width:50%;
+    margin-left:24.8%;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="../index.html" id='home'
+            style="float: left;display: block;color: black;text-align: center;text-decoration: none;padding:5px 15px;font-size: 17px;border-radius:10px;"><img
+                src='https://github.com/techguy16/appfortune/blob/main/Logo.png?raw=true' width=50px></a>
+    </div>
+    <br><br><br><br>
+<div id='app'>
+
+    <img src='https://i.ibb.co/ZxpCwS4/Untitled-drawing-2.png' width=200px
+        style='float:left;margin-left:10px;border-radius:10px;border-color:black;border:2px solid black; margin-right:10px;'>
+        <table style='width:69%;'>
+            <th>
+        <h1 id='appname'>Microsoft Calculator</h1>
+    </th>    
+    <th>
+    <div class="dropdown" style='float:right;position:absolute; top:100px;'>
+        <button onclick="myFunction()" class="dropbtn">Download</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://apps.microsoft.com/store/detail/9WZDNCRFHVN5?hl=en-nz&gl=NZ"><table><th><img src='https://pnggrid.com/wp-content/uploads/2021/06/Windows-11-Icon-Logo.png' width=25px style='margin-right:10px;'></th><th>Windows</th></table></a>
+            <a href="https://apps.apple.com/us/app/uno-calculator/id1464736591"><table><th><img src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' width=25px style='margin-right:10px;'></th><th>macOS</th></table></a>
+            <a href="https://snapcraft.io/uno-calculator"><table><th><img src='https://cdn.iconscout.com/icon/free/png-256/snapcraft-3521718-2945162.png' width=25px style='margin-right:10px;'></th><th>Linux (Snapcraft)</th></table></a>
+            <a href="https://dw27.uptodown.com/dwn/4OU3DQeJRURB9yWAplfGmVAx9Pq6yQ7PV8aAIpO0ZLvdgI_Ef1drCutPLvXiG_TXBXqwY-0bXNdniasNxq2IvetLn5ik-sr9sIX1rugkZ2V53V-mZ_leSnmaAtDkgJ7b/tRmgdI9T2u8ssP3--3IABQ1_3fRPrk5QS7ZziczU979aWwmPZhqVjb7S7bY7C5VgDP6IVUsiZsWM_ct2v3UOLMHWzdnMOE2si5ZJeLkw0ZgXT7jzXZ28_TFw6ZtT01Yr/urfd23v_7KIC9DuOLt8JnBaI_l9fSnwBYh0k7FF4YVrA5xDSuDZZzaR0piFAX73nPkdHJeM4wy7Bt0sKxHnfsQ==/uno-calculator-1-2-4.apk"><table><th><img src='https://cdn.freebiesupply.com/logos/large/2x/android-logo-png-transparent.png' width=25px style='margin-right:10px;'></th><th>Android</th></table></a>
+            <a href="https://apps.apple.com/us/app/uno-calculator/id1464736591"><table><th><img src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' width=25px style='margin-right:10px;'></th><th>iOS/iPadOS</th></table></a>
+            <hr>
+            <a href="https://github.com/microsoft/calculator/"><table><th><img src='https://cdn-icons-png.flaticon.com/512/25/25231.png' width=25px style='margin-right:10px;'></th><th>View on GitHub</th></table></a>
+        </div>
+    </div>
+</th></table>
+    <p id='madeby'>Made by: Microsoft Corporation (Ported to other platforms by Uno Platform)</p>
+    <p><b>Privacy Rating:</b> <yellow>OK</yellow></p>
+
+<br>
+<br>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'description')" id="defaultOpen"><b>ABOUT</b></button>
+  <button class="tablinks" onclick="openCity(event, 'compatibility')"><b>INFORMATION</b></button>
+</div>
+<!-- Tab content -->
+<div id="description" class="tabcontent">
+A simple yet powerful calculator that includes standard, scientific, programmer, and graphing calculator functionality, as well as a set of converters between various units of measurement and currencies. It's the perfect tool to help you complete your math homework, manage your finances, plot and analyze equations on a graph, and evaluate algebra, trigonometry, and complex math expressions!
+
+</div>
+
+<div id="compatibility" class="tabcontent">
+<h3>Compatibility</h3>
+  <p><b>Windows Compatibility:</b> Windows 11+</p>
+  <p><b>macOS Compatibility:</b> OS X 10.11+</p>
+  <p><b>Linux Compatibility:</b> Compatible with all modern Distros</p>
+  <p><b>iOS/iPadOS Compatibility:</b> iOS 10+</p>
+  <p><b>Android Compatibility:</b> Android 5.0 "Lollipop"+</p>
+</div>
+
+</div>
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+</html>

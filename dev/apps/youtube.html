@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>App Fortune</title>
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+
+    </script>
+    <style>
+        /* .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        } */
+        body {
+            margin: 5px 5px 5px 5px;
+            background-color: #f0f0f0;
+            overflow: none;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        .list {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .applist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        .agelistparent {
+            overflow-y: scroll;
+            width: 100%;
+            max-height: 205px;
+        }
+
+        .agelist {
+            width: 99% !important;
+            height: 50px;
+            background-color: white;
+            margin: 5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+
+        #appname {
+            font-size: 60px;
+        }
+
+        #madeby {
+            font-size: 20px;
+        }
+
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px 45px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            position: absolute;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left:-88px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: block;
+            font-size:15px;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom:3px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+yellow {color:orange;font-weight:bold;}
+
+@media only screen and (min-width: 1399px) {
+  #app {
+    width:75%;
+    margin-left:12%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  #app {
+    width:50%;
+    margin-left:24.8%;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="../index.html" id='home'
+            style="float: left;display: block;color: black;text-align: center;text-decoration: none;padding:5px 15px;font-size: 17px;border-radius:10px;"><img
+                src='https://github.com/techguy16/appfortune/blob/main/Logo.png?raw=true' width=50px></a>
+    </div>
+    <br><br><br><br>
+<div id='app'>
+
+    <img src='https://i.pinimg.com/originals/7d/c9/93/7dc993c70d4adba215b87cafdc59d82d.png' width=200px
+        style='float:left;margin-left:10px;border-radius:10px;border-color:black;border:2px solid black; margin-right:10px;'>
+        <table style='width:69%;'>
+            <th>
+        <h1 id='appname'>YouTube</h1>
+    </th>    
+    <th>
+    <div class="dropdown" style='float:right;position:absolute; top:100px;'>
+        <button onclick="myFunction()" class="dropbtn">Download</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://r-static-assets.androidapks.com/rdata/3a4f3ac44478d1fa79028bb5b540a0e3/com.google.android.youtube_v17.38.36-1531831744_Android-8.0.apk"><table><th><img src='https://cdn.freebiesupply.com/logos/large/2x/android-logo-png-transparent.png' width=25px style='margin-right:10px;'></th><th>Android</th></table></a>
+            <a href="https://apps.apple.com/us/app/youtube-watch-listen-stream/id544007664"><table><th><img src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' width=25px style='margin-right:10px;'></th><th>iOS/iPadOS</th></table></a>
+        </div>
+    </div>
+</th></table>
+    <p id='madeby'>Made by: Google, LLC.</p>
+    <p><b>Privacy Rating:</b> <yellow>OK</yellow></p>
+
+<br>
+<br>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'description')" id="defaultOpen"><b>ABOUT</b></button>
+  <button class="tablinks" onclick="openCity(event, 'compatibility')"><b>INFORMATION</b></button>
+</div>
+<!-- Tab content -->
+<div id="description" class="tabcontent">
+Get the official YouTube app on your devices. See what the world is watching -- from the hottest music videos to what’s popular in gaming, fashion, beauty, news, learning and more. Subscribe to channels you love, create content of your own, share with friends, and watch on any device.
+<br><br>
+Watch and subscribe<br>
+● Browse personal recommendations on Home<br>
+
+● See the latest from your favorite channels in Subscriptions<br>
+
+● Look up videos you’ve watched, liked, and saved for later in Library<br><br>
+
+Explore different topics, what’s popular, and on the rise (available in select countries)<br>
+
+● Stay up to date on what’s popular in music, gaming, beauty, news, learning and more<br>
+
+● See what’s trending on YouTube and around the world on Explore<br>
+
+● Learn about the coolest Creators, Gamers, and Artists on the Rise (available in select countries)<br><br>
+
+Connect with the YouTube community<br>
+
+● Keep up with your favorites creators with Posts, Stories, Premieres, and Live streams<br>
+
+● Join the conversation with comments and interact with creators and other community members<br><br>
+
+Create content from your mobile device<br>
+
+● Create or upload your own videos directly in the app<br>
+
+● Engage with your audience in real time with live streaming right from the app<br><br>
+
+Find the experience that fits you and your family (available in select countries)<br>
+
+● Every family has their own approach to online video. Learn about your options: the YouTube Kids app or a new parent supervised experience on YouTube at youtube.com/myfamily<br><br>
+
+Support creators you love with channel memberships (available in select countries)<br>
+
+● Join channels that offer paid monthly memberships and support their work<br>
+
+● Get access to exclusive perks from the channel & become part of their members community<br>
+
+● Stand out in comments and live chats with a loyalty badge next to your username<br><br>
+
+Upgrade to YouTube Premium (available in select countries)<br>
+
+● Watch videos uninterrupted by ads, while using other apps, or when the screen is locked<br>
+
+● Save videos for when you really need them – like when you’re on a plane or commuting<br>
+
+● Get access to YouTube Music Premium as part of your benefits<br><br>
+
+Monthly price: $15.99 USD (US, TC) / $19.99 AUD / $20.99 NZD / $155MXN / £15.99GBP / €15.99 EUR (IE, DE, AT, FR, FI, IT, ES, BE, NL, LU) / $15.99 CAD / 149 kr SEK / 149 kr NOK / 249 ₽ RUB / 149 kr. DKK / R$27.90 BRL / CHF19.90 CHF / ¥1,550 JPY / USD$4.99 (UA, AR) / COP$22,900 / CLP$5,500 / S/.26.90 PEN / €10.99 EUR (PT, CY, GR, MT, EE, LT, LV) / ₹169.00 INR / R94.99 ZAR / USD$9.49 (CR, EC, DO, UY, GT, BO, HN, SV, PY, NI, PA, VE, BY, BM, KY) / 32.99 zł PLN / RON34.99 / 239.00 Kč CZK / Ft2,390.00 HUF / lev14.99 BGN / USD$10.99 (MK) / €9.49 EUR (SK, SI) / ₺21.99 TRY / USD$18.59 (IS) / kn99.99 HRK / ₪31.90 ILS / dh32.99 AED / Rial32.99 SAR / Rial32.99 QAR / USD$7.99 (BH, KW, OM, LB, PG) / Rp79,000 IDR / NT$230.00 TWD / ฿209.00 THB / ₱209.00 PHP / $88.00 HKD / RM23.90 MYR / $15.98 SGD / ₦1,500.00 NGN / £79.99 EGP<br><br>
+
+YouTube paid service terms: https://www.youtube.com/t/terms_paidservice.<br>
+
+Privacy policy: https://www.google.com/policies/privacy
+
+</div>
+
+<div id="compatibility" class="tabcontent">
+<h3>Compatibility</h3>
+  <p><b>Android Compatibility:</b> Android 8.0+</p>
+  <p><b>iOS/iPadOS Compatibility:</b> iOS/iPadOS 14+</p>
+</div>
+
+</div>
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+</html>
